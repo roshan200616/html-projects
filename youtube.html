@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style=" font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;">
 
 <head>
     <meta charset="UTF-8">
@@ -20,8 +21,19 @@
             padding-left: 15px;
             padding-top: 13px;
             margin-top: 7px;
-            height: 3px;
-            width: 35px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .sidebarImage {
+            width: 28px;
+            height: 30px;
+        }
+
+        .sidebarButton {
+            background-color: transparent;
+            border: none;
+            color: white;
         }
 
         .logo {
@@ -34,7 +46,7 @@
 
         .head {
             display: flex;
-            margin-top: -2px;
+            margin-top: -8px;
 
         }
 
@@ -45,101 +57,91 @@
         }
 
         .search {
-            margin-top: 10px;
-            background-color: rgb(65, 64, 64);
+            margin-top: 4px;
+            background-color: #0f0f0f;
             color: white;
-            border: none;
-            border-color: rgb(26, 26, 26);
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-            margin-left: 159px;
-            width: 500px;
-            height: 30px;
+            border: solid;
+            border-color: hsla(0, 0%, 100%, .08);
+            border-top-left-radius: 22px;
+            border-bottom-left-radius: 22px;
+            margin-left: 156px;
+            width: 514px;
+            height: 38px;
             outline: none;
+            padding-left: 26px;
+            border-width: 1px;
         }
 
         .search:hover {
-            background-color: rgb(90, 89, 89);
-            transition: 0.5s;
             border-color: rgb(69, 69, 215);
-            border-width: 10px;
+            border-width: 1px;
         }
 
         .searchicon {
-            background-color: rgb(49, 49, 49);
-            height: 32px;
-            width: 50px;
-            border: 6px;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
+            background-color: hsla(0, 0%, 100%, .08);
+            height: 42px;
+            width: 60px;
+            margin-top: -6px;
+            border-top-right-radius: 26px;
+            border-bottom-right-radius: 26px;
+            border: none;
+            padding-top: 6px;
+            padding-left: 12px;
 
         }
 
         .searchicon:hover {
             cursor: pointer;
-            background-color: rgb(48, 46, 46);
-            transition: 0.5s;
+
         }
 
         .voicer {
-            background-color: rgb(65, 64, 64);
+            background-color: hsla(0, 0%, 100%, .08);
             color: white;
             border-radius: 50%;
-            width: 33px;
-            height: 33px;
-            margin-top: 13px;
-            margin-left: 10px;
+            width: 38px;
+            height: 38px;
+            margin-top: 8px;
+            margin-left: 24px;
             border: none;
+            transition: 0.10s;
         }
 
         .voicer:hover {
             cursor: pointer;
             background-color: rgb(90, 89, 89);
-            transition: 0.5s;
         }
 
-        .settings {
-            background-color: rgb(34, 33, 33);
-            color: white;
+        .create {
+            width: 98px;
+            display: inline-flex;
+            height: 37px;
+            margin-left: 116px;
+            margin-top: 10px;
+            border-radius: 24PX;
             border: none;
-
+            background-color: hsla(0, 0%, 100%, .08);
+            color: white;
+            padding-left: 12px;
         }
 
-        .settings :hover {
-            cursor: pointer;
+        .notifications {
+            display: inline-flex;
+            width: 40px;
+            height: 30px;
+            color: white;
+            margin-top: -10px;
+            padding-left: 10px;
+            position: relative;
         }
 
-        .headDiv {
-            margin-left: 160px;
-            margin-top: 16px;
+        .notificationIcon {
+            width: 30px;
         }
-
-        .sign {
-            display: flex;
-
-        }
-
-        .signlogo {
-            width: 100%;
-            height: 100%;
-            display: block;
-            fill: blue;
-        }
-
-        .SignIn {
-            margin-left: 15px;
-            margin-top: 4px;
-        }
-
-        .signButton {
-            background-color: rgb(34, 33, 33);
-            border: solid;
-            border-color: rgb(49, 47, 47);
-            border-radius: 50px;
-            margin-top: 12px;
-            margin-left: 50px;
-            border-width: 1px;
-
+        .notificationNumber{
+            background-color: red;
+            color: white;
+            height: 4px;
         }
 
         .sidetext {
@@ -154,6 +156,7 @@
             overflow-x: hidden;
             max-height: 550px;
             transition: 0.10s;
+            font-size: 20px;
         }
 
         .sidetext::-webkit-scrollbar {
@@ -166,7 +169,7 @@
 
         .sidetext:hover::-webkit-scrollbar-thumb {
             background: #666;
-            border-radius: 6px;
+            border-radius: 4px;
         }
 
         .home {
@@ -195,19 +198,21 @@
 
         .homeicon {
             width: 32px;
-            height: 22px;
+            height: 24px;
         }
 
         .hometext {
             list-style-type: none;
             font-family: "Roboto", "Arial", sans-serif;
-            margin-top: 5px;
+            margin-top: 2px;
+            font-size: 14px;
+            font-weight: 578;
         }
 
         .line {
             width: 250px;
             margin-bottom: 1px;
-            border-color: rgb(195, 195, 202);
+            border-color: rgb(64 64 64);
         }
 
         .explore {
@@ -221,7 +226,7 @@
 
         .inside {
             display: inline-flex;
-            gap: 40px
+            gap: 32px
         }
 
         .menu {
@@ -230,15 +235,18 @@
             height: 42px;
             overflow-x: scroll;
             overflow-y: hidden;
-            max-width: 1030px;
+            max-width: 1088px;
         }
 
         .menu>button {
-            border-radius: 6px;
+            border-radius: 10px;
             border: none;
             white-space: nowrap;
             background-color: #484747;
             color: white;
+            padding: 1px 12px 0px 12px;
+            font-size: 14px;
+            font-weight: 576;
         }
 
         .menu::-webkit-scrollbar {
@@ -250,13 +258,36 @@
         }
 
         .menu:hover::-webkit-scrollbar-thumb {
-            background: #4a4949;
+            background: #0f0f0f;
             border-radius: 6px;
         }
 
         .menu>button:hover {
             cursor: pointer;
-            background-color: #777373;
+            background-color: #666;
+        }
+
+        .mainContent {
+            display: flex;
+            flex-direction: column;
+            gap: 132px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 526px;
+            margin-top: 22px;
+        }
+
+        .mainContent::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .mainContent::-webkit-scrollbar-track {
+            background-color: #0f0f0f;
+        }
+
+        .mainContent:hover::-webkit-scrollbar-thumb {
+            background: #666;
+            border-radius: 6px;
         }
 
         .contents {
@@ -281,37 +312,61 @@
             font-size: 14px;
             color: white;
         }
-        .contentName{
-            font-family: "Roboto", "Arial", sans-serif ;
-            color:  rgb(145, 143, 143);
+
+        .contentName {
+            font-family: "Roboto", "Arial", sans-serif;
+            color: rgb(145, 143, 143);
             margin: 0px;
             font-size: 12px;
+            margin-left: 40px;
         }
-        .contentDate{
-            font-family: "Roboto", "Arial", sans-serif ;
-            color:  rgb(145, 143, 143);
+
+        .contentDate {
+            font-family: "Roboto", "Arial", sans-serif;
+            color: rgb(145, 143, 143);
             margin: 0px;
             font-size: 12px;
+            margin-left: 40px;
+        }
+
+        .contentLogo {
+            width: 36px;
+            height: 36px;
+            margin-top: 6px;
+        }
+
+        .contentIcon {
+            width: 60px;
+            height: 40px;
+            margin: 0px;
+            fill: white;
         }
     </style>
 </head>
 
-<body style="background-color:#0f0f0f; overflow-x: hidden;">
-    <div>
+<body style="background-color:#0f0f0f; overflow-x: hidden; overflow-y: hidden;">
+    <div class="Main">
         <div class="head">
             <div class="sidebar">
-                <div class="side"></div>
-                <div clss="side"></div>
-                <div class="side"></div>
-                <div class="side"></div>
-
+                <button id="button" class="sidebarButton" aria-label="Guide" aria-pressed="true">
+                    <yt-icon id="guide-icon" icon="yt-icons:menu"
+                        class="style-scope ytd-masthead"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
+                            class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
+                            <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                    focusable="false" aria-hidden="true"
+                                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+                                </svg></div>
+                        </span></yt-icon>
+                </button>
             </div>
             <div>
                 <img src="./logo.webp" class="logo">
             </div>
             <div class="headSearch">
                 <div>
-                    <input type="text" class="search">
+                    <input type="text" class="search" placeholder="Search">
 
                 </div>
                 <div style="padding-top: 10px; width: 60px;">
@@ -354,51 +409,49 @@
                         </div>
                     </tp-yt-paper-tooltip></ytd-button-renderer>
             </div>
-            <div class="headDiv">
-                <yt-icon-button id="button"><!--css-build:shady--><!--css_build_scope:yt-icon-button--><button
-                        id="button" class="settings" title="settings"><yt-icon
-                            class="style-scope ytd-topbar-menu-button-renderer"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
-                                class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
-                                <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
-                                        viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
-                                        style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
-                                        <path
-                                            d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
-                                        </path>
-                                    </svg></div>
-                            </span></yt-icon></button><yt-interaction id="interaction"
-                        class="circular style-scope yt-icon-button"><!--css-build:shady--><!--css_build_scope:yt-interaction--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.ui.yt_interaction.yt.interaction.css.js-->
-                        <div class="stroke style-scope yt-interaction"></div>
-                        <div class="fill style-scope yt-interaction"></div>
-                    </yt-interaction></yt-icon-button>
-            </div>
-            <div>
-                <button class="signButton">
-                    <a class="sign"
-                        href="https://accounts.google.com/ServiceLogin?service=youtube&amp;uilel=3&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&amp;hl=en-GB&amp;ec=65620">
-                        <div>
-                            <div class="signlogo"><svg xmlns="http://www.w3.org/2000/svg" height="24"
-                                    viewBox="0 0 24 24" width="24">
-                                    <path
-                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 1c4.96 0 9 4.04 9 9 0 1.42-.34 2.76-.93 3.96-1.53-1.72-3.98-2.89-7.38-3.03A3.996 3.996 0 0016 9c0-2.21-1.79-4-4-4S8 6.79 8 9c0 1.97 1.43 3.6 3.31 3.93-3.4.14-5.85 1.31-7.38 3.03C3.34 14.76 3 13.42 3 12c0-4.96 4.04-9 9-9zM9 9c0-1.65 1.35-3 3-3s3 1.35 3 3-1.35 3-3 3-3-1.35-3-3zm3 12c-3.16 0-5.94-1.64-7.55-4.12C6.01 14.93 8.61 13.9 12 13.9c3.39 0 5.99 1.03 7.55 2.98C17.94 19.36 15.16 21 12 21z">
-                                    </path>
-                                </svg>
-                            </div>
-                            </span>
+            <button class="create">
+                <div class="yt-spec-button-shape-next__icon" aria-hidden="true" style="width: 20px;
+                height: 34px;"><yt-icon
+                        style="width: 24px; height: 24px;"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
+                            class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
+                            <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path d="M20 12h-8v8h-1v-8H3v-1h8V3h1v8h8v1z"></path>
+                                </svg></div>
+                        </span></yt-icon></div>
+                <div class="yt-spec-button-shape-next__button-text-content" style="margin-top: 8px;
+    padding-left: 4px; font-size: 14px; font-weight: 550"><span
+                        class="yt-core-attributed-string yt-core-attributed-string--white-space-no-wrap"
+                        role="text">Create</span></div><yt-touch-feedback-shape style="border-radius: inherit;">
+                    <div aria-hidden="true"
+                        class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--overlay-touch-response">
+                        <div class="yt-spec-touch-feedback-shape__stroke"></div>
+                        <div class="yt-spec-touch-feedback-shape__fill"></div>
+                    </div>
+                </yt-touch-feedback-shape>
+            </button>
+            <button style="background-color: #0f0f0f; border: none;">
+                <yt-icon-badge-shape>
+                    <div class="notifications">
+                        <div class="notificationIcon">
+                            <yt-icon><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
+                                    class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
+                                    <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24"
+                                            viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                            style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                            <path clip-rule="evenodd"
+                                                d="m13.497 4.898.053.8.694.4C15.596 6.878 16.5 8.334 16.5 10v2.892c0 .997.27 1.975.784 2.83L18.35 17.5H5.649l1.067-1.778c.513-.855.784-1.833.784-2.83V10c0-1.666.904-3.122 2.256-3.902l.694-.4.053-.8c.052-.78.703-1.398 1.497-1.398.794 0 1.445.618 1.497 1.398ZM6 10c0-2.224 1.21-4.165 3.007-5.201C9.11 3.236 10.41 2 12 2c1.59 0 2.89 1.236 2.993 2.799C16.79 5.835 18 7.776 18 10v2.892c0 .725.197 1.436.57 2.058l1.521 2.535c.4.667-.08 1.515-.857 1.515H15c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879s-1.559-.316-2.121-.879C9.316 20.56 9 19.796 9 19H4.766c-.777 0-1.257-.848-.857-1.515L5.43 14.95c.373-.622.57-1.333.57-2.058V10Zm4.5 9c0 .398.158.78.44 1.06.28.282.662.44 1.06.44s.78-.158 1.06-.44c.282-.28.44-.662.44-1.06h-3Z"
+                                                fill-rule="evenodd"></path>
+                                        </svg></div>
+                                </span></yt-icon>
                         </div>
-                        <div class="SignIn"><span
-                                class="yt-core-attributed-string yt-core-attributed-string--white-space-no-wrap"
-                                role="text">Sign in</span>
-                            <div aria-hidden="true"
-                                class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--touch-response">
-                                <div class="yt-spec-touch-feedback-shape__stroke"></div>
-                                <div class="yt-spec-touch-feedback-shape__fill"></div>
-                            </div>
-                        </div>
-                    </a>
-                </button>
-            </div>
+                        <div class="notificationNumber">9+</div>
+                    </div>
+                </yt-icon-badge-shape>
+            </button>
 
         </div>
         <div class="inside">
@@ -720,40 +773,353 @@
                     <button>New to you</button>
 
                 </div>
-                <div>
+                <div class="mainContent">
                     <div class="contents">
                         <div class="firstContent">
-                            <img
-                                src="https://i.ytimg.com/vi/aaEtrVA9Sfc/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Ac4FgALQBYoCDAgAEAEYESBrKHIwDw==&amp;rs=AOn4CLDlHS6ftv6LJIfCSu5zKfeyOL0Y2Q">
-                            <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"style="margin:0px">
-                                <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
-                                class="contentLink"
-                                    style=""><span
-                                        class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
-                                        role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
-                                        Vignesh Srikanth | Pranav Muniraj</span></a></h3>
-                                <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
-                                    Sai
-                                    Abhyankkar and more</span>
-                                <span class="contentDate"dir="auto" role="text">Updated today</span>
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent;   border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/N5yXKzeV688/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLC9PEo6TM4RT-39qDdLJPHSfZs7Dw">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
                         </div>
                         <div class="firstContent">
                             <img alt=""
                                 class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent;"
+                                style="background-color: transparent;border-radius: 12px;"
                                 src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
 
                         </div>
                         <div class="firstContent">
                             <img alt=""
                                 class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg">
-                            <a href="/watch?v=dG2MODM1SJY&amp;list=RDdG2MODM1SJY&amp;start_radio=1"
-                                class="contentLink" aria-haspopup="false"
-                                style="color: white;"><span
-                                    class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
-                                    role="text">Mix – Olalai Official Music Video I kelithee x ofRo I Dir. by Ken
-                                    Royson I @AttiCulture</span></a>
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
+                                style="border-radius: 12px;">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent;   border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/N5yXKzeV688/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLC9PEo6TM4RT-39qDdLJPHSfZs7Dw">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent; border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+
+                        </div>
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
+                                style="border-radius:12px;">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent;   border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/N5yXKzeV688/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLC9PEo6TM4RT-39qDdLJPHSfZs7Dw">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent; border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+
+                        </div>
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
+                                style="border-radius: 12px;">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent;   border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/N5yXKzeV688/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLC9PEo6TM4RT-39qDdLJPHSfZs7Dw">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                style="background-color: transparent; border-radius: 12px;"
+                                src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+
+                        </div>
+                        <div class="firstContent">
+                            <img alt=""
+                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
+                                style="border-radius: 12px;">
+                            <div style="display: flex; gap:4px;"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
                         </div>
                     </div>
                 </div>
