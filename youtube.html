@@ -9,22 +9,19 @@
     <link rel="icon" href="./youtubelogo.png">
     <style>
         .side {
-            width: 19px;
+            width: 20px;
             height: 2px;
-
             background-color: rgb(249, 241, 241);
             margin: 5px;
-
         }
 
         .logoBar {
             display: inline-flex;
-            margin-top: -4px;
         }
 
         .sidebar {
             padding-left: 10px;
-            padding-top: 13px;
+            padding-top: 12px;
             margin-top: 6px;
             width: 44px;
             height: 44px;
@@ -51,8 +48,7 @@
 
         .head {
             display: flex;
-            margin-top: -8px;
-
+            justify-content: space-between;
         }
 
         .headSearch {
@@ -61,41 +57,62 @@
             margin-top: 2px;
         }
 
-        .search {
-            margin-top: 5px;
-            background-color: #0f0f0f;
-            color: white;
+
+        .headSearchContainer {
+            height: 40px;
+            display: flex;
+            flex-direction: row;
             border: solid;
+            border-width: 1px;
             border-color: hsla(0, 0%, 100%, .08);
-            border-top-left-radius: 22px;
-            border-bottom-left-radius: 22px;
-            margin-left: 174px;
+            border-radius: 22px;
+            margin-top: 4px;
+            margin-left: 132px;
+        }
+
+        .search-icon {
+            pointer-events: none;
+            display: inherit;
+            width: 26px;
+            height: 40px;
+            margin-top: 8px;
+            margin-left: 14px;
+            display: none;
+        }
+
+        .headSearch:has(input:focus) .search-icon {
+            display: block;
+
+        }
+
+        .headSearchContainer>svg>input:hover {
+            border-color: blue;
+        }
+
+        .search-input {
+            background-color: transparent;
+            color: white;
             width: 518px;
             height: 36px;
             outline: none;
-            padding-left: 16px;
-            border-width: 1px;
+            border: none;
+            padding-left: 14px;
         }
+        
 
         .search::placeholder {
             font-size: 16px;
-        }
-
-        .search:hover {
-            border-color: rgb(69, 69, 215);
-            border-width: 1px;
         }
 
         .searchicon {
             background-color: hsla(0, 0%, 100%, .08);
             height: 40px;
             width: 64px;
-            margin-top: -5px;
+            margin-top: -6px;
             border-top-right-radius: 26px;
             border-bottom-right-radius: 26px;
             border: none;
             padding-top: 6px;
-            padding-left: 16px;
         }
 
         .searchicon:hover {
@@ -205,15 +222,16 @@
         }
 
         .sidetext:hover::-webkit-scrollbar-thumb {
-            background: #666;
+            background: hsla(0, 0%, 100%, .08);
             border-radius: 4px;
         }
+
+
 
         .home {
             display: flex;
             gap: 19px;
             font-size: smaller;
-            white-space: nowarp;
             height: 30px;
             padding-top: 10px;
             margin-bottom: 0px;
@@ -221,11 +239,12 @@
             border: none;
             border-radius: 12px;
             padding-left: 14px;
+            width: 196px;
         }
 
         .home:hover {
             cursor: pointer;
-            background-color: #777373;
+            background: hsla(0, 0%, 100%, .08);
         }
 
         .home>ul {
@@ -280,11 +299,13 @@
             border-radius: 10px;
             border: none;
             white-space: nowrap;
-            background-color: #484747;
+            background-color: hsla(0, 0%, 100%, .08);
             color: white;
             padding: 0px 12px 4px 12px;
-            font-size: 14px;
-            font-weight: 572;
+            font-family: "Roboto", "Arial", sans-serif;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            font-weight: 550;
         }
 
         .menu::-webkit-scrollbar {
@@ -302,7 +323,8 @@
 
         .menu>button:hover {
             cursor: pointer;
-            background-color: #666;
+            background-color: rgb(90, 89, 89);
+            ;
         }
 
         .mainContent {
@@ -382,7 +404,7 @@
     </style>
 </head>
 
-<body style="background-color:#0f0f0f; overflow-x: hidden; overflow-y: hidden;">
+<body style="background-color:#0f0f0f;overflow-x: hidden;overflow-y: hidden;margin: 0px;">
     <div class="Main">
         <div class="head">
             <div class="logoBar">
@@ -405,50 +427,58 @@
                 </div>
             </div>
             <div class="headSearch">
-                <div>
-                    <input type="text" class="search" placeholder="Search">
-
-                </div>
-                <div style="padding-top: 10px; width: 60px;">
-                    <button class="searchicon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" focusable="false" aria-hidden="true"
-                            style="pointer-events: none; display: inherit; width: 100%; height: 100%; padding-top: 2px;padding-left: 3px;">
+                <div class="headSearchContainer">
+                    <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" focusable="false" aria-hidden="true">
                             <path clip-rule="evenodd"
                                 d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
                                 fill-rule="evenodd"></path>
                         </svg>
-                    </button>
+                    </div>
+                    <input type="text" class="search-input" placeholder="Search">
+                    <div style="padding-top: 6px; width: 64px;">
+                        <button class="searchicon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" focusable="false" aria-hidden="true"
+                                style="pointer-events: none; display: inherit; width: 100%; height: 100%; padding-top: 2px;padding-left: 3px;">
+                                <path clip-rule="evenodd"
+                                    d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="voice-search-button" class="style-scope ytd-masthead">
+                    <ytd-button-renderer class="style-scope ytd-masthead" button-renderer=""
+                        button-next=""><!--css-build:shady--><yt-button-shape><button class="voicer">
+                                <div class="yt-spec-button-shape-next__icon" aria-hidden="true"><yt-icon
+                                        style="width: 24px; height: 24px;"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
+                                            class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
+                                            <div style="width: 100%; height: 100%; display: block; fill: currentcolor;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false" aria-hidden="true"
+                                                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </span></yt-icon></div><yt-touch-feedback-shape style="border-radius: inherit;">
+                                    <div aria-hidden="true"
+                                        class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--overlay-touch-response">
+                                        <div class="yt-spec-touch-feedback-shape__stroke"></div>
+                                        <div class="yt-spec-touch-feedback-shape__fill"></div>
+                                    </div>
+                                </yt-touch-feedback-shape>
+                            </button></yt-button-shape><tp-yt-paper-tooltip offset="8" role="tooltip" tabindex="-1"
+                            aria-label="tooltip"
+                            style="inset: 55.9945px auto auto 980.207px;"><!--css-build:shady--><!--css_build_scope:tp-yt-paper-tooltip--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,third_party.javascript.youtube_components.tp_yt_paper_tooltip.tp.yt.paper.tooltip.css.js-->
+                            <div id="tooltip" class="style-scope tp-yt-paper-tooltip hidden" style-target="tooltip">
+
+                            </div>
+                        </tp-yt-paper-tooltip></ytd-button-renderer>
                 </div>
             </div>
-            <div id="voice-search-button" class="style-scope ytd-masthead">
-                <ytd-button-renderer class="style-scope ytd-masthead" button-renderer=""
-                    button-next=""><!--css-build:shady--><yt-button-shape><button class="voicer">
-                            <div class="yt-spec-button-shape-next__icon" aria-hidden="true"><yt-icon
-                                    style="width: 24px; height: 24px;"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
-                                        class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
-                                        <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
-                                                xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
-                                                width="24" focusable="false" aria-hidden="true"
-                                                style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
-                                                <path
-                                                    d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z">
-                                                </path>
-                                            </svg></div>
-                                    </span></yt-icon></div><yt-touch-feedback-shape style="border-radius: inherit;">
-                                <div aria-hidden="true"
-                                    class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--overlay-touch-response">
-                                    <div class="yt-spec-touch-feedback-shape__stroke"></div>
-                                    <div class="yt-spec-touch-feedback-shape__fill"></div>
-                                </div>
-                            </yt-touch-feedback-shape>
-                        </button></yt-button-shape><tp-yt-paper-tooltip offset="8" role="tooltip" tabindex="-1"
-                        aria-label="tooltip"
-                        style="inset: 55.9945px auto auto 980.207px;"><!--css-build:shady--><!--css_build_scope:tp-yt-paper-tooltip--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,third_party.javascript.youtube_components.tp_yt_paper_tooltip.tp.yt.paper.tooltip.css.js-->
-                        <div id="tooltip" class="style-scope tp-yt-paper-tooltip hidden" style-target="tooltip">
 
-                        </div>
-                    </tp-yt-paper-tooltip></ytd-button-renderer>
-            </div>
             <div class="createNoificaion">
                 <button class="create">
                     <div class="yt-spec-button-shape-next__icon" aria-hidden="true" style="width: 22px;
@@ -542,7 +572,7 @@
                             <li class="hometext">Subscriptions</li>
                         </ul>
                         <hr class="line">
-                        </ul>
+
                         <ul class="home">
                             <div class="homeicon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
@@ -675,7 +705,7 @@
                                         fill-rule="evenodd"></path>
                                 </svg>
                             </div>
-                            <li class="hometext">Fashion & Beauty</li>
+                            <li class="hometext">Fashion &amp; Beauty</li>
                         </ul>
                         <ul class="home">
                             <div class="homeicon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -1100,6 +1130,9 @@
                 </div>
             </div>
 
+
+        </div>
+    </div>
 </body>
 
 </html>
