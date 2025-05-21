@@ -8,6 +8,13 @@
     <title>Youtube</title>
     <link rel="icon" href="./youtubelogo.png">
     <style>
+     
+        .mainBody{
+            background-color:#0f0f0f;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            margin: 0px;
+        }
         .side {
             width: 20px;
             height: 2px;
@@ -18,7 +25,6 @@
         .logoBar {
             display: inline-flex;
         }
-
         .sidebar {
             padding-left: 10px;
             padding-top: 12px;
@@ -38,6 +44,12 @@
             color: white;
         }
 
+        .sidebar-icon {
+            width: 100%;
+            height: 100%;
+            fill: white;
+        }
+
         .logo {
             width: 116px;
             height: 56px;
@@ -45,7 +57,7 @@
             margin-top: -6px;
             margin-left: -14px;
         }
-
+        
         .head {
             display: flex;
             gap: 104px;
@@ -55,6 +67,8 @@
             display: flex;
             flex-direction: row;
             margin-top: 2px;
+            justify-content: flex-end;
+            width: 724px;
         }
 
 
@@ -68,6 +82,24 @@
             border-radius: 22px;
             margin-top: 8px;
             margin-left: 70px;
+        }
+        .inputIcon {
+            border: solid;
+            border-width: 1px;
+            border-color: transparent;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .inputIcon:hover {
+            border-color: #1c62b9;
+        }
+
+        .searchIcon {
+            padding-top: 6px;
+            width: 64px;
         }
 
         .search-icon {
@@ -83,10 +115,6 @@
         .headSearch:has(input:focus) .search-icon {
             display: block;
 
-        }
-
-        .headSearchContainer>svg>input:hover {
-            border-color: blue;
         }
 
         .search-input {
@@ -134,6 +162,12 @@
             transition: 0.10s;
         }
 
+        .voicer-icon {
+            width: 100%;
+            height: 100%;
+            fill: white;
+        }
+
         .voicer:hover {
             cursor: pointer;
             background-color: rgb(90, 89, 89);
@@ -155,6 +189,23 @@
             background-color: hsla(0, 0%, 100%, .08);
             color: white;
             padding-left: 12px;
+        }
+
+        .create-icon {
+            width: 22px;
+            height: 32px;
+            fill: white;
+        }
+
+        .create-text {
+            margin-top: 8px;
+            margin-left: 2px;
+            font-weight: 550;
+        }
+
+        .notification-button {
+            background-color: #0f0f0f;
+            border: none;
         }
 
         .notifications {
@@ -179,6 +230,13 @@
             width: 24px;
             position: absolute;
             right: 4px;
+        }
+
+        .notificationLogo{
+            width: 100%;
+            height: 100%;
+            display: block;
+            fill: currentcolor;
         }
 
         .emailLogo {
@@ -227,8 +285,6 @@
             border-radius: 4px;
         }
 
-
-
         .home {
             display: flex;
             gap: 19px;
@@ -239,10 +295,9 @@
             margin-top: 0px;
             border: none;
             border-radius: 12px;
-            padding-left: 14px;
-            width: 196px;
+            padding-left: 12px;
+            width: 196px
         }
-
         .home:hover {
             cursor: pointer;
             background: hsla(0, 0%, 100%, .08);
@@ -253,17 +308,17 @@
             height: 48px;
         }
 
-        .homeicon {
+         .homeicon {
             width: 32px;
             height: 24px;
         }
 
         .hometext {
             list-style-type: none;
-            font-family: "Roboto", "Arial", sans-serif;
-            margin-top: 2px;
+             margin-top: 2px;
             font-size: 14px;
             font-weight: 400;
+            text-transform: capitalize;
         }
 
         .line {
@@ -275,11 +330,11 @@
 
         .explore {
             margin-left: 18px;
-            font-family: "Roboto", "Arial", sans-serif;
             font-size: 19px;
             font-weight: 500;
             margin-bottom: 8px;
             margin-top: 4px;
+            padding-top: 20px;
         }
 
         .inside {
@@ -293,7 +348,7 @@
             height: 40px;
             overflow-x: scroll;
             overflow-y: hidden;
-            max-width: 1136px;
+            max-width: 1080px;
         }
 
         .menu>button {
@@ -302,8 +357,7 @@
             white-space: nowrap;
             background-color: hsla(0, 0%, 100%, .08);
             color: white;
-            padding: 0px 12px 4px 12px;
-            font-family: "Roboto", "Arial", sans-serif;
+            padding: 2px 12px 6px 10px;
             font-size: 1.4rem;
             line-height: 2rem;
             font-weight: 550;
@@ -354,20 +408,30 @@
         .contents {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             gap: 16px;
+        }
+
+        .contentImage {
+            background-color: transparent;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            width: 344px;
+
         }
 
         .firstContent {
             display: flex;
             flex-direction: column;
-            max-width: 344px;
-            max-height: 193px;
-            gap: 2px;
+        }
 
+        .content-name {
+            display: flex;
+            gap: 4px;
+            width: 350px;
         }
 
         .contentLink {
-            font-family: "Roboto", "Arial", sans-serif;
             text-decoration: none;
             font-weight: 400;
             font-size: 14px;
@@ -375,7 +439,6 @@
         }
 
         .contentName {
-            font-family: "Roboto", "Arial", sans-serif;
             color: rgb(145, 143, 143);
             margin: 0px;
             font-size: 12px;
@@ -383,7 +446,6 @@
         }
 
         .contentDate {
-            font-family: "Roboto", "Arial", sans-serif;
             color: rgb(145, 143, 143);
             margin: 0px;
             font-size: 12px;
@@ -405,22 +467,17 @@
     </style>
 </head>
 
-<body style="background-color:#0f0f0f;overflow-x: hidden;overflow-y: hidden;margin: 0px;">
+<body class="mainBody">
     <div class="Main">
         <div class="head">
             <div class="logoBar">
                 <div class="sidebar">
                     <button id="button" class="sidebarButton" aria-label="Guide" aria-pressed="true">
-                        <yt-icon id="guide-icon" icon="yt-icons:menu"
-                            class="style-scope ytd-masthead"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
-                                class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
-                                <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
-                                        focusable="false" aria-hidden="true"
-                                        style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
-                                        <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
-                                    </svg></div>
-                            </span></yt-icon>
+                        <div class="sidebar-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+                            </svg></div>
                     </button>
                 </div>
                 <div>
@@ -429,15 +486,17 @@
             </div>
             <div class="headSearch">
                 <div class="headSearchContainer">
-                    <div class="search-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" focusable="false" aria-hidden="true">
-                            <path clip-rule="evenodd"
-                                d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
-                                fill-rule="evenodd"></path>
-                        </svg>
+                    <div class="inputIcon">
+                        <div class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" focusable="false" aria-hidden="true">
+                                <path clip-rule="evenodd"
+                                    d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input type="text" class="search-input" placeholder="Search">
                     </div>
-                    <input type="text" class="search-input" placeholder="Search">
-                    <div style="padding-top: 6px; width: 64px;">
+                    <div class="searchIcon">
                         <button class="searchicon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="white" focusable="false" aria-hidden="true"
                                 style="pointer-events: none; display: inherit; width: 100%; height: 100%; padding-top: 2px;padding-left: 3px;">
@@ -448,89 +507,49 @@
                         </button>
                     </div>
                 </div>
-                <div id="voice-search-button" class="style-scope ytd-masthead">
-                    <ytd-button-renderer class="style-scope ytd-masthead" button-renderer=""
-                        button-next=""><!--css-build:shady--><yt-button-shape><button class="voicer">
-                                <div class="yt-spec-button-shape-next__icon" aria-hidden="true"><yt-icon
-                                        style="width: 24px; height: 24px;"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
-                                            class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
-                                            <div style="width: 100%; height: 100%; display: block; fill: currentcolor;">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
-                                                    width="24" focusable="false" aria-hidden="true"
-                                                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
-                                                    <path
-                                                        d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </span></yt-icon></div><yt-touch-feedback-shape style="border-radius: inherit;">
-                                    <div aria-hidden="true"
-                                        class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--overlay-touch-response">
-                                        <div class="yt-spec-touch-feedback-shape__stroke"></div>
-                                        <div class="yt-spec-touch-feedback-shape__fill"></div>
-                                    </div>
-                                </yt-touch-feedback-shape>
-                            </button></yt-button-shape><tp-yt-paper-tooltip offset="8" role="tooltip" tabindex="-1"
-                            aria-label="tooltip"
-                            style="inset: 55.9945px auto auto 980.207px;"><!--css-build:shady--><!--css_build_scope:tp-yt-paper-tooltip--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,third_party.javascript.youtube_components.tp_yt_paper_tooltip.tp.yt.paper.tooltip.css.js-->
-                            <div id="tooltip" class="style-scope tp-yt-paper-tooltip hidden" style-target="tooltip">
-
-                            </div>
-                        </tp-yt-paper-tooltip></ytd-button-renderer>
+                <div>
+                    <button class="voicer" title="Search with yor voice">
+                        <div class="voicer-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false" aria-hidden="true"
+                                style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                <path
+                                    d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z">
+                                </path>
+                            </svg>
+                            </di>
+                        </div>
+                    </button>
                 </div>
             </div>
 
             <div class="createNoificaion">
                 <button class="create">
-                    <div class="yt-spec-button-shape-next__icon" aria-hidden="true" style="width: 22px;
-                height: 32px;"><yt-icon
-                            style="width: 24px; height: 24px;"><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
-                                class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
-                                <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
-                                        viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
-                                        style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
-                                        <path d="M20 12h-8v8h-1v-8H3v-1h8V3h1v8h8v1z"></path>
-                                    </svg></div>
-                            </span></yt-icon></div>
-                    <div class="yt-spec-button-shape-next__button-text-content" style="margin-top: 7px;
-    padding-left: 2px; font-size: 14px; font-weight: 550"><span
-                            class="yt-core-attributed-string yt-core-attributed-string--white-space-no-wrap"
-                            role="text">Create</span></div><yt-touch-feedback-shape style="border-radius: inherit;">
-                        <div aria-hidden="true"
-                            class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--overlay-touch-response">
-                            <div class="yt-spec-touch-feedback-shape__stroke"></div>
-                            <div class="yt-spec-touch-feedback-shape__fill"></div>
-                        </div>
-                    </yt-touch-feedback-shape>
+                    <div class="create-icon"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                            height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                            style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                            <path d="M20 12h-8v8h-1v-8H3v-1h8V3h1v8h8v1z"></path>
+                        </svg></div>
+                    <p class="create-text">Create</p>
                 </button>
-                <button style="background-color: #0f0f0f; border: none;">
-                    <yt-icon-badge-shape>
-                        <div class="notifications">
-                            <div class="notificationIcon">
-                                <yt-icon><!--css-build:shady--><!--css_build_scope:yt-icon--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.core.yt_icon.yt.icon.css.js--><span
-                                        class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
-                                        <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24"
-                                                viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
-                                                style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
-                                                <path clip-rule="evenodd"
-                                                    d="m13.497 4.898.053.8.694.4C15.596 6.878 16.5 8.334 16.5 10v2.892c0 .997.27 1.975.784 2.83L18.35 17.5H5.649l1.067-1.778c.513-.855.784-1.833.784-2.83V10c0-1.666.904-3.122 2.256-3.902l.694-.4.053-.8c.052-.78.703-1.398 1.497-1.398.794 0 1.445.618 1.497 1.398ZM6 10c0-2.224 1.21-4.165 3.007-5.201C9.11 3.236 10.41 2 12 2c1.59 0 2.89 1.236 2.993 2.799C16.79 5.835 18 7.776 18 10v2.892c0 .725.197 1.436.57 2.058l1.521 2.535c.4.667-.08 1.515-.857 1.515H15c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879s-1.559-.316-2.121-.879C9.316 20.56 9 19.796 9 19H4.766c-.777 0-1.257-.848-.857-1.515L5.43 14.95c.373-.622.57-1.333.57-2.058V10Zm4.5 9c0 .398.158.78.44 1.06.28.282.662.44 1.06.44s.78-.158 1.06-.44c.282-.28.44-.662.44-1.06h-3Z"
-                                                    fill-rule="evenodd"></path>
-                                            </svg></div>
-                                    </span></yt-icon>
-                            </div>
-                            <div class="notificationNumber">9+</div>
+                <button class="notification-button">
+                    <div class="notifications">
+                        <div class="notificationIcon">
+                            <div class="notificationLogo"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path clip-rule="evenodd"
+                                        d="m13.497 4.898.053.8.694.4C15.596 6.878 16.5 8.334 16.5 10v2.892c0 .997.27 1.975.784 2.83L18.35 17.5H5.649l1.067-1.778c.513-.855.784-1.833.784-2.83V10c0-1.666.904-3.122 2.256-3.902l.694-.4.053-.8c.052-.78.703-1.398 1.497-1.398.794 0 1.445.618 1.497 1.398ZM6 10c0-2.224 1.21-4.165 3.007-5.201C9.11 3.236 10.41 2 12 2c1.59 0 2.89 1.236 2.993 2.799C16.79 5.835 18 7.776 18 10v2.892c0 .725.197 1.436.57 2.058l1.521 2.535c.4.667-.08 1.515-.857 1.515H15c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879s-1.559-.316-2.121-.879C9.316 20.56 9 19.796 9 19H4.766c-.777 0-1.257-.848-.857-1.515L5.43 14.95c.373-.622.57-1.333.57-2.058V10Zm4.5 9c0 .398.158.78.44 1.06.28.282.662.44 1.06.44s.78-.158 1.06-.44c.282-.28.44-.662.44-1.06h-3Z"
+                                        fill-rule="evenodd"></path>
+                                </svg></div>
                         </div>
-                    </yt-icon-badge-shape>
+                        <div class="notificationNumber">9+</div>
+                    </div>
                 </button>
                 <div class="emailLogo">
-                    <button id="avatar-btn" aria-haspopup="true" class="emailB" aria-label="Account menu">
-                        <yt-img-shadow height="32" width="32"
-                            class="style-scope ytd-topbar-menu-button-renderer no-transition" loaded=""
-                            style="background-color: transparent;"><!--css-build:shady--><!--css_build_scope:yt-img-shadow--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.shared.ui.yt_img_shadow.yt.img.shadow.css.js--><img
-                                id="img" draggable="false" class="emailImage" alt="Avatar image" height="32" width="32"
-                                src="https://yt3.ggpht.com/ytc/AIdro_l-WPruEngifbfolAJ9ooMYouWRIljSLSUdcbFXhpBKLR2w067aQRcH7LDc0zzrTdX9yg=s88-c-k-c0x00ffffff-no-rj"></yt-img-shadow>
+                    <button class="emailB">
+                        <img id="img" draggable="false" class="emailImage" alt="Avatar image" height="32" width="32"
+                            src="https://yt3.ggpht.com/ytc/AIdro_l-WPruEngifbfolAJ9ooMYouWRIljSLSUdcbFXhpBKLR2w067aQRcH7LDc0zzrTdX9yg=s88-c-k-c0x00ffffff-no-rj">
                     </button>
                 </div>
             </div>
@@ -858,11 +877,9 @@
                 <div class="mainContent">
                     <div class="contents">
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent;border-radius: 8px;margin-bottom: 8px;"
+                            <img class="contentImage"
                                 src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
-                            <div style="display: flex; gap:12px;    width: 350px;"> <img alt="" class="contentLogo"
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
@@ -887,11 +904,9 @@
                             <span class="contentDate" dir="auto" role="text">Updated today</span>
                         </div>
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent;border-radius: 8px;margin-bottom: 8px;    width: 350px;"
+                            <img class="contentImage"
                                 src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
-                            <div style="display: flex; gap:12px;     width: 350px;"> <img alt="" class="contentLogo"
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
@@ -917,42 +932,9 @@
 
                         </div>
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
-                                style="border-radius: 8px;margin-bottom: 8px;  ">
-                            <div style="display: flex; gap:12px;    width: 350px;"> <img alt="" class="contentLogo"
-                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
-                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
-                                    style="margin:0px">
-                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
-                                        class="contentLink" style=""><span
-                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
-                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah
-                                            |
-                                            Vignesh Srikanth | Pranav Muniraj</span></a>
-                                </h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
-                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
-                                    class="contentIcon">
-                                    <path
-                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
-                                Sai
-                                Abhyankkar and more</span>
-                            <span class="contentDate" dir="auto" role="text">Updated today</span>
-                        </div>
-                    </div>
-                    <div class="contents">
-                        <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent;border-radius: 8px;margin-bottom: 8px;"
-                                src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
-                            <div style="display: flex; gap:12px;    width: 350px;"> <img alt="" class="contentLogo"
+                            <img class="contentImage"
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg">
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
@@ -977,11 +959,36 @@
                             <span class="contentDate" dir="auto" role="text">Updated today</span>
                         </div>
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent; border-radius: 8px;margin-bottom: 8px;"
+                            <img class="contentImage"
                                 src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
-                            <div style="display: flex; gap:12px;     width: 350px;"> <img alt="" class="contentLogo"
+                            <div class="content-name"> <img alt="" class="contentLogo"
+                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                                <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
+                                    style="margin:0px">
+                                    <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
+                                        class="contentLink" style=""><span
+                                            class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap"
+                                            role="text">Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah
+                                            |
+                                            Vignesh Srikanth | Pranav Muniraj</span></a>
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    class="contentIcon">
+                                    <path
+                                        d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="contentName" dir="auto" role="text">Vaisagh, Josh Vivian,
+                                Sai
+                                Abhyankkar and more</span>
+                            <span class="contentDate" dir="auto" role="text">Updated today</span>
+                        </div>
+                        <div class="firstContent">
+                            <img class="contentImage"
+                                src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
@@ -1007,11 +1014,9 @@
 
                         </div>
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
-                                style="border-radius:8px;margin-bottom: 8px;">
-                            <div style="display: flex; gap:4px;    width: 350px;"> <img alt="" class="contentLogo"
+                            <img class="contentImage"
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg">
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
@@ -1035,16 +1040,10 @@
                                 Abhyankkar and more</span>
                             <span class="contentDate" dir="auto" role="text">Updated today</span>
                         </div>
-                    </div>
-
-
-                    <div class="contents">
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent;border-radius: 8px;margin-bottom: 8px;"
+                            <img class="contentImage"
                                 src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
-                            <div style="display: flex; gap:4px;    width: 350px;"> <img alt="" class="contentLogo"
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
@@ -1069,12 +1068,10 @@
                             <span class="contentDate" dir="auto" role="text">Updated today</span>
                         </div>
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                style="background-color: transparent; border-radius: 8px;margin-bottom: 8px;"
+                            <img class="contentImage"
                                 src="https://i.ytimg.com/vi/fbfgrTgnaww/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&amp;rs=AOn4CLBQ1-ZOc_s3dD5miS7y__o43Z4l_Q">
-                            <div style="display: flex; gap:4px;    width: 350px;"> <img alt="" class="contentLogo"
-                                    src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
+                            <div style="display: flex; gap:4px;    width: 350px;" class="content-name"
+                                src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
                                     <a href="/watch?v=aaEtrVA9Sfc&amp;list=RDaaEtrVA9Sfc&amp;start_radio=1"
@@ -1099,11 +1096,9 @@
 
                         </div>
                         <div class="firstContent">
-                            <img alt=""
-                                class="yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded"
-                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg"
-                                style="border-radius: 8px;margin-bottom: 8px;">
-                            <div style="display: flex; gap:4px;    width: 350px;"> <img alt="" class="contentLogo"
+                            <img class="contentImage"
+                                src="https://i.ytimg.com/vi/dG2MODM1SJY/hqdefault.jpg?sqp=-oaymwExCOADEI4CSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYWSBlKF4wDw==&amp;rs=AOn4CLBrqox_BWKfTP3iC-tstt-RIAZdrg">
+                            <div class="content-name"> <img alt="" class="contentLogo"
                                     src="https://yt3.ggpht.com/p4TyMutaPSAFZNzFWSGHM0rbT59hPYuAhvMFfpi6uyNJyRLeUG5og5x91rtE6vnb5Vq1TcWT=s68-c-k-c0x00ffffff-no-rj">
                                 <h3 title="Mix – Vaisagh - En Rant Ah Konjam Kelu | Think Indie | Judah | Vignesh Srikanth | Pranav Muniraj"
                                     style="margin:0px">
