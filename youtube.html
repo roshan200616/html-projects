@@ -8,13 +8,13 @@
     <title>Youtube</title>
     <link rel="icon" href="./youtubelogo.png">
     <style>
-     
-        .mainBody{
-            background-color:#0f0f0f;
+        .mainBody {
+            background-color: #0f0f0f;
             overflow-x: hidden;
             overflow-y: hidden;
             margin: 0px;
         }
+
         .side {
             width: 20px;
             height: 2px;
@@ -25,12 +25,13 @@
         .logoBar {
             display: inline-flex;
         }
+
         .sidebar {
             padding-left: 10px;
             padding-top: 12px;
             margin-top: 6px;
             width: 44px;
-            height: 44px;
+
         }
 
         .sidebarImage {
@@ -57,7 +58,7 @@
             margin-top: -6px;
             margin-left: -14px;
         }
-        
+
         .head {
             display: flex;
             gap: 104px;
@@ -71,7 +72,6 @@
             width: 724px;
         }
 
-
         .headSearchContainer {
             height: 40px;
             display: flex;
@@ -81,8 +81,8 @@
             border-color: hsla(0, 0%, 100%, .08);
             border-radius: 22px;
             margin-top: 8px;
-            margin-left: 70px;
         }
+
         .inputIcon {
             border: solid;
             border-width: 1px;
@@ -127,7 +127,6 @@
             padding-left: 14px;
 
         }
-
 
         .search-input::placeholder {
             font-size: 16px;
@@ -232,7 +231,7 @@
             right: 4px;
         }
 
-        .notificationLogo{
+        .notificationLogo {
             width: 100%;
             height: 100%;
             display: block;
@@ -298,6 +297,7 @@
             padding-left: 12px;
             width: 196px
         }
+
         .home:hover {
             cursor: pointer;
             background: hsla(0, 0%, 100%, .08);
@@ -308,14 +308,14 @@
             height: 48px;
         }
 
-         .homeicon {
+        .homeicon {
             width: 32px;
             height: 24px;
         }
 
         .hometext {
             list-style-type: none;
-             margin-top: 2px;
+            margin-top: 2px;
             font-size: 14px;
             font-weight: 400;
             text-transform: capitalize;
@@ -463,6 +463,59 @@
             margin: 0px;
             fill: white;
             margin-top: -8px;
+        }
+
+        @media screen and (max-width:1000px) {
+            .sidebar {
+                padding-left: 10px;
+                padding-top: 12px;
+                margin-top: 6px;
+                width: 24px;
+                height: 44px;
+            }
+
+            .logo {
+                width: 57px;
+                height: 24px;
+                padding: 10px;
+                margin-top: 2px;
+                margin-left: -12px;
+            }
+
+            .head {
+                gap: 0px;
+            }
+
+            .search-input {
+                width: 328px;
+                background-color: transparent;
+                color: white;
+                height: 18px;
+                outline: none;
+                border: none;
+                padding-left: 14px;
+            }
+
+            .headSearch {
+                display: flex;
+                flex-direction: row;
+                margin-top: 2px;
+                justify-content: flex-end;
+                width: 490px;
+            }
+
+            .headSearchContainer {
+                height: 20px;
+                display: flex;
+                flex-direction: row;
+                border: solid;
+                border-width: 1px;
+                border-color: hsla(0, 0%, 100%, .08);
+                border-radius: 22px;
+                margin-top: 12px;
+
+            }
+
         }
     </style>
 </head>
