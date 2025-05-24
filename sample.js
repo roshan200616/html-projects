@@ -1,7 +1,7 @@
 function calcTotal(tamil, e, m, s, so) {
     return tamil + e + m + s + so;
 }
-console.log("total mark:", total(60, 70, 80, 90, 100));
+console.log("total mark:", calcTotal(60, 70, 80, 90, 100));
 
 
 var mark = [60, 70, 80, 100, 90]
@@ -15,7 +15,7 @@ function sum(marks) {
     for (var i = 0; i < marks.length; i++) {
         total += marks[i]
     }
-    return a
+    return total
 }
 console.log("total mark:", sum(mark))
 
@@ -30,8 +30,8 @@ var list = [{
 function marktotal(marksArr) {
     let a = 0
     const marks = marksArr[0]
-    for (const mark in marks) {
-        a += marks[0][mark]
+    for (var mark in marks) {
+        a += marks[mark]
     }
     return a
 }
@@ -45,10 +45,9 @@ function totalmark(input) {
     for (let i = 0; i < input.length; i++) {
         var a = 0
         for (value in input[i]) {
-            if(input[i].hasOwnProperty(value)){
          
             a += input[i][value]
-            }
+           
         }
         totals.push(a)
     }

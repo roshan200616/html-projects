@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20vh 80vh 20vh;
+            grid-template-areas: "h h h"
+                "sb1 m sb2"
+                "f f f";
+
+        }
+
+        .layout div {
+            background-color: burlywood;
+            border: 1px solid;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .head {
+            grid-area: h;
+        }
+
+        .sidebar1 {
+            grid-area: sb1;
+        }
+
+        .main {
+            grid-area: m;
+        }
+
+        .sidebar2 {
+            grid-area: sb2;
+        }
+
+        .footer {
+            grid-area: f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="head">Head</div>
+        <div class="sidebar1">sidebar1</div>
+        <div class="main">main</div>
+        <div class="sidebar2">sidebar2</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
