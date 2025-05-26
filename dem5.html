@@ -8,4 +8,11 @@
 <body>
     
 </body>
-</html>
+</html> 
+students.sort((a, b) => {
+  const [aDay, aMonth, aYear] = a.date.split("-").map(Number);
+  const [bDay, bMonth, bYear] = b.date.split("-").map(Number);
+  const aDate = new Date(aYear, aMonth - 1, aDay);
+  const bDate = new Date(bYear, bMonth - 1, bDay);
+  return aDate - bDate; 
+});
