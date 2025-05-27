@@ -47,7 +47,6 @@ function totalmark(input) {
         for (value in input[i]) {
          
             a += input[i][value]
-           
         }
         totals.push(a)
     }
