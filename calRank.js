@@ -13,21 +13,18 @@ var student = [
   { name: "Arun Kumar", date: "22-05-2005", tamil: 100, english: 98, maths: 100, science: 98, social: 100 },
 ];
 const arrLenth = student.length
-const subject = ['tamil', 'english', 'maths', 'science', 'social']
+const subjects = ['tamil', 'english', 'maths', 'science', 'social']
 for (let i = 0; i < arrLenth; i++) {
   student[i].total = student[i].tamil + student[i].english + student[i].maths + student[i].science + student[i].social;
   var studentResult = true
-  for (let subjects of subject) {
-    if (student[i][subjects] <= 35) {
+  for (let subject of subjects) {
+    if (student[i][subject] <= 35) {
       studentResult = false
+      break;
     }
   }
-  if (studentResult == true) {
-    student[i].result = "pass"
-  }
-  else {
-    student[i].result = "fail"
-  }
+  student[i].result = studentResult ? "pass" : "fail"
+
 };
 
 student.sort((a, b) => {
