@@ -22,11 +22,11 @@
         </div>
         <div class="custom-control custom-checkbox">
           <label>Skills: </label>
-          <input type="checkbox" class="custom-control-input" value="python" id="skill1" name="Skills">
+          <input type="checkbox" class="custom-control-input" value="python" id="skill1" name="skills">
           <label class="custom-control-label" for="skill1">Python</label>
-          <input type="checkbox" class="custom-control-input" value="c++" id="skill2" name="Skills">
+          <input type="checkbox" class="custom-control-input" value="c++" id="skill2" name="skills">
           <label class="custom-control-label" for="skill2">C++</label>
-          <input type="checkbox" class="custom-control-input" value="c++" name="Skills">
+          <input type="checkbox" class="custom-control-input" value="c++" name="skills">
           <label class="custom-control-label" for="skill3">Java</label>
         </div>
         <div class="d-flex gap-2">
@@ -51,13 +51,13 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="multipleSelecter">Language</label>
-          <select class="form-control" id="multipleSelecter" multiple name="subject">
-            <option>Tamil</option>
-            <option>English</option>
-            <option>Maths</option>
-            <option>science</option>
-            <option>social</option>
+          <label for="multipleSelecter">Subjects</label>
+          <select class="form-control" id="subjects" name="subjects" multiple>
+            <option value="Tamil">Tamil</option>
+            <option value="English">English</option>
+            <option value="Maths">Maths</option>
+            <option value="science">Science</option>
+            <option value="social">social</option>
           </select>
         </div>
         <div>
@@ -85,7 +85,7 @@
   <script type="text/javascript">
     const nameDom = document.getElementById("name")
     const genderDom = Array.from(document.querySelectorAll('input[name="gender"]'));
-    const skillsDom = Array.from(document.querySelectorAll('input[name="Skills"]'))
+    const skillsDom = Array.from(document.querySelectorAll('input[name="skills"]'))
     const cityDom = document.querySelector('select[name="city"]')
     const disclaimerDom = document.querySelector('textarea[name="disclaimer"]')
     const data = {
@@ -93,30 +93,29 @@
       skills: [],
       gender: '',
       city: '',
-    disclaimer: ''
+      disclaimer: '',
+      subjects: []
 
     }
+      document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    document.querySelector("form").addEventListener("submit",function(event){
-    event.preventDefault()
-      const genderDomNew = genderDom.find(item => item.checked)
-      const selectedSkill = skillsDom.filter(item => item.checked).map(item => item.value)
+        const genderDomNew = genderDom.find(item => item.checked);
+        const selectedSkill = skillsDom.filter(item => item.checked).map(item => item.value);
+        const subjectsSelected = Array.from(document.querySelectorAll('#subjects option'))
+          .filter(item => item.selected)
+          .map(item => item.value);
 
-      if (!genderDomNew) {
-        alert("select the Gender")
-      }
-      data.name = nameDom.value;
-      data.gender = genderDomNew.value;
-      data.skills = selectedSkill
-      data.city = cityDom.value
-      data.disclaimer = disclaimerDom.value
-      console.log(data.name)
-      console.log(data.gender);
-      console.log(data.skills.join(","))
-      console.log(data.city)
-      console.log(data.disclaimer)
-    })
+        data.name = nameDom.value;
+        data.gender = genderDomNew.value 
+        data.skills = selectedSkill;
+        data.city = cityDom.value;
+        data.disclaimer = disclaimerDom.value;
+        data.subjects = subjectsSelected;
 
+        console.log(data);
+      });
   </script>
 </body>
+
 </html>
