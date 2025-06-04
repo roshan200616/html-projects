@@ -82,7 +82,7 @@
       </div>
     </div>
   </form>
-  <script type="text/javascript">
+  <script>   
     const nameDom = document.getElementById("name")
     const genderDom = Array.from(document.querySelectorAll('input[name="gender"]'));
     const skillsDom = Array.from(document.querySelectorAll('input[name="skills"]'))
@@ -97,25 +97,25 @@
       subjects: []
 
     }
-      document.querySelector("form").addEventListener("submit", function (event) {
-        event.preventDefault();
+    document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        const genderDomNew = genderDom.find(item => item.checked);
-        const selectedSkill = skillsDom.filter(item => item.checked).map(item => item.value);
-        const subjectsSelected = Array.from(document.querySelectorAll('#subjects option'))
-          .filter(item => item.selected)
-          .map(item => item.value);
+      const genderDomNew = genderDom.find(item => item.checked);
+      const selectedSkill = skillsDom.filter(item => item.checked).map(item => item.value);
+      const subjectsSelected = Array.from(document.querySelectorAll('#subjects option'))
+        .filter(item => item.selected)
+        .map(item => item.value);
 
-        data.name = nameDom.value;
-        data.gender = genderDomNew.value 
-        data.skills = selectedSkill;
-        data.city = cityDom.value;
-        data.disclaimer = disclaimerDom.value;
-        data.subjects = subjectsSelected;
+      data.name = nameDom.value;
+      data.gender = genderDomNew.value
+      data.skills = selectedSkill;
+      data.city = cityDom.value;
+      data.disclaimer = disclaimerDom.value;
+      data.subjects = subjectsSelected;
 
-        console.log(data);
-      });
-  </script>
-</body>
+      console.log(data);
+    });
+    </script>
+    </body>
 
 </html>
