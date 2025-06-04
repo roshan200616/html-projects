@@ -1,59 +1,71 @@
-const mysql = require("mysql2")
-const connecting = mysql.createConnection(
-    {
-        host: 'localhost',
-        user: 'root',
-        password: 'ROOT!@#$@',
-        database: 'school'
-    }
-)
+const mysql = require("mysql2");
+const connecting = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Root1234@',
+    database: 'school'
+});
+
 connecting.connect((err) => {
     if (err) {
-        console.log(err.message)
+        console.log(err.message);
+    } else {
+        console.log('connected to database');
     }
-    else {
-        console.log('connected to database')
+});
+
+const table = 'CREATE TABLE IF NOT EXISTS detail(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255))';
+connecting.query(table, (err, results) => {
+    if (err) {
+        console.log(err.message);
+        return;
     }
-})
-// const table = 'create table detail(id int auto_increment primary key,name varchar(255))'
-// connecting.query(table,(err,results)=>{
-//     if(err){
-//         console.log(err.message)
-//         return
-//     }
-//     console.log(results)
-// })
-const value = [['gani'], ['praveen'], ['savari']]
-const insert = 'insert into detail(name) values ("muruga")'
-const select = 'select * from detail'
-const alter = 'alter table detail auto_increment = 0'
-// connecting.query(alter,(err,result)=>{
-//     if(err){
-//         console.log(err.message)
-//     }
-//     console.log("alter is worked")
-// })
-connecting.query(insert,(err,result)=>{
-    if(err){
-        console.log(err.message)
-        return
+    console.log("Table ready");
+});
+
+const insert = 'insert into detail(name) value("tamil")';
+const update = 'UPDATE detail SET name = ? WHERE id = ?';
+
+connecting.query(insert, (err, insertResult) => {
+    if (err) {
+        console.log(err.message);
+        return;
     }
-    console.log("insert complete")
-    console.log(result)
-    connecting.query(`select * from detail where id = ${result.insertId}`, (err, result) => {
+    const insertedId = insertResult.insertId;
+    console.log("Insert complete", insertResult);
+    connecting.query(`SELECT * FROM detail WHERE id = ${insertedId}`, (err, select) => {
         if (err) {
-            console.log(err.message)
+            console.log(err.message);
+            return;
         }
-        console.log(result)
-        connecting.end()
-
-    })
+        console.log("Before update:", select);
+        connecting.query(update, ['tamil', insertedId], (err, updateResult) => {
+            if (err) {
+                console.log(err.message);
+                return;
+            }
+            console.log('Update complete:', updateResult);
+            connecting.query(`SELECT * FROM detail WHERE id = ${insertedId}`, (err, selectAfterupdate) => {
+                if (err) {
+                    console.log(err.message);
+                    return;
+                }
+                console.log("After update:", selectAfterupdate);
+                connecting.query(`delete from detail where id =${insertedId}`, (err, deleteresult) => {
+                    if (err) {
+                        console.log(err.message)
+                    }
+                    console.log('deleted complete', deleteresult)
+                    connecting.query(`SELECT * FROM detail WHERE id = ${insertedId}`, (err, selectAfterdelete) => {
+                        if (err) {
+                            console.log(err.message);
+                            return;
+                        }
+                        console.log("After update:", selectAfterdelete);
+                    })
+                    connecting.end();
+                });
+            });
+        });
+    });
 })
-
-// connecting.query(select, (err, result) => {
-//     if (err) {
-//         console.log(err.message)
-//     }
-//     console.log(result.at(-1))
-// })
-
