@@ -2,7 +2,7 @@ const mysql = require("mysql2");
 const connecting = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Root1234@',
+    password: 'ROOT!@#$@',
     database: 'school'
 });
 
@@ -14,58 +14,62 @@ connecting.connect((err) => {
     }
 });
 
-const table = 'CREATE TABLE IF NOT EXISTS detail(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255))';
+const table = /*sql*/`create table if not exists 
+    detail(
+        id int auto_increment primary key, name varchar(255))`
 connecting.query(table, (err, results) => {
     if (err) {
         console.log(err.message);
         return;
     }
     console.log("Table ready");
-});
+    const insert = /*sql*/`insert into detail(name) value("gani")`;
+    const update = 'update detail set name = ? where id = ?';
 
-const insert = 'insert into detail(name) value("tamil")';
-const update = 'UPDATE detail SET name = ? WHERE id = ?';
-
-connecting.query(insert, (err, insertResult) => {
-    if (err) {
-        console.log(err.message);
-        return;
-    }
-    const insertedId = insertResult.insertId;
-    console.log("Insert complete", insertResult);
-    connecting.query(`SELECT * FROM detail WHERE id = ${insertedId}`, (err, select) => {
+    connecting.query(insert, (err, insertResult) => {
         if (err) {
             console.log(err.message);
             return;
         }
-        console.log("Before update:", select);
-        connecting.query(update, ['tamil', insertedId], (err, updateResult) => {
+        const insertedId = insertResult.insertId;
+        console.log("Insert complete", insertResult);
+        connecting.query(`select * from detail where id = ${insertedId}`, (err, select) => {
             if (err) {
                 console.log(err.message);
                 return;
             }
-            console.log('Update complete:', updateResult);
-            connecting.query(`SELECT * FROM detail WHERE id = ${insertedId}`, (err, selectAfterupdate) => {
+            console.log("Before update:", select);
+            connecting.query(update, ['tamil', insertedId], (err, updateResult) => {
                 if (err) {
                     console.log(err.message);
                     return;
                 }
-                console.log("After update:", selectAfterupdate);
-                connecting.query(`delete from detail where id =${insertedId}`, (err, deleteresult) => {
+                console.log('Update complete:', updateResult);
+                connecting.query(`select * from detail where id = ${insertedId}`, (err, selectAfterupdate) => {
                     if (err) {
-                        console.log(err.message)
+                        console.log(err.message);
+                        return;
                     }
-                    console.log('deleted complete', deleteresult)
-                    connecting.query(`SELECT * FROM detail WHERE id = ${insertedId}`, (err, selectAfterdelete) => {
+                    console.log("After update:", selectAfterupdate);
+                    connecting.query(`delete from detail where id =${insertedId}`, (err, deleteresult) => {
                         if (err) {
-                            console.log(err.message);
-                            return;
+                            console.log(err.message)
                         }
-                        console.log("After update:", selectAfterdelete);
-                    })
-                    connecting.end();
+                        console.log('deleted complete', deleteresult)
+                        connecting.query(`select * from detail where id = ${insertedId}`, (err, selectAfterdelete) => {
+                            if (err) {
+                                console.log(err.message);
+
+                                return;
+                            }
+                            console.log("After update:", selectAfterdelete);
+                        })
+                        connecting.end();
+                    });
                 });
             });
         });
-    });
-})
+    })
+
+});
+
