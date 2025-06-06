@@ -5,10 +5,11 @@ const multer = require('multer');
 const app = express();
 const mysql = require("mysql2");
 const dbConnection = mysql.createConnection({
-  host: 'localhost',
+  host: '103.208.228.191',
   user: 'root',
-  password: 'ROOT!@#$@',
-  database: 'school'
+  password: 'Root1234@',
+  database: 'school',
+  port : '3000'
 });
 
 app.use(bodyParser.json());
@@ -29,30 +30,36 @@ dbConnection.connect((err) => {
 });
 const STUDENT_INSERT = /*sql*/`INSERT INTO detail(name) VALUE(?)`
 app.get('/api/students', (req, res) => {
-  dbConnection.query(`select * from detail`, (err, students) => {
+  dbConnection.query(/*sql*/`select * from detail`, (err, students) => {
     if (err) {
-      console.log(err.message);
-      return;
+      res.status(500).send("server error")
     }
-    res.send(students)
+    res.status(200).send(students)
   })
 })
 app.get('/api/student/:studentId/', (req, res) => {
   const studentId = req.params.studentId
   dbConnection.query(/*sql*/`SELECT * FROM detail WHERE id = ?`, [studentId], (err, student) => {
     if (err) {
-      console.log(err.message)
+      res.status(500).send("server error")
     }
-    res.send(student)
+    else {
+      if (student.length === 0) {
+        return res.status(404).send(" 404 Not found")
+      }
+      else {
+        res.status(200).send(student)
+      }
+    }
   })
 })
 app.post('/api/student/', (req, res) => {
   const data = req.body;
   dbConnection.query(STUDENT_INSERT, [data.name], (err, insertResult) => {
     if (err) {
-      console.log(err.message)
+      res.status(500).send("server error")
     }
-    res.send(data);
+    res.status(204).send(data);
   })
 })
 app.put('/api/student/:studentId', (req, res) => {
@@ -60,25 +67,33 @@ app.put('/api/student/:studentId', (req, res) => {
   const data = req.body
   dbConnection.query(/*sql*/`UPDATE detail SET name = ? WHERE  id = ?`, [data.name, studentId], (err, updateID) => {
     if (err) {
-      console.log(err.message)
+      res.status(500).send("server error")
     }
-     
-    dbConnection.query(/*sql*/`SELECT *FROM detail WHERE id = ?`, [studentId], (err, afterUpdated) => {
-      if (err) {
-        console.log(err.message)
+    else {
+      if (updateID.changedRows === 0) {
+        return res.status(404).send('not found the id')
       }
-      res.json(afterUpdated[0])
-    })
+      else {
+        return res.status(204).send()
+      }
+    }
   })
 })
-app.delete('/api/student/:studentId',(req,res) =>{
-   const deleteId = req.params.studentId
+app.delete('/api/student/:studentId', (req, res) => {
+  const deleteId = req.params.studentId
   const data = req.body
-  dbConnection.query(/*sql*/`DELETE FROM detail where id = ?`,[deleteId],(err,afterDelete) => {
-    if(err){
-      console.log(err.message)
+  dbConnection.query(/*sql*/`DELETE FROM detail where id = ?`, [deleteId], (err, results) => {
+    if (err) {
+      res.status(500).send("server error")
     }
-    res.send("delete the id")
+    else {
+      if (updateID.changedRows === 0) {
+        return res.status(404).send('not found the id')
+      }
+      else {
+        return res.status(204).send()
+      }
+    }
   })
 })
 function initSQl() {
